@@ -68,5 +68,11 @@ func is_on_left_wall():
 		return true
 	return false
 
+func do_damage(d):
+	Global.decrease_health(d)
+	if Global.health <= 0:
+		die()
+		
 func die():
+	Global.decrease_lives(1)
 	queue_free()

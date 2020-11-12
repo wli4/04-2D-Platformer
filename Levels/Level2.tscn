@@ -1,19 +1,19 @@
 [gd_scene load_steps=26 format=2]
 
-[ext_resource path="res://Assets/spritesheet_default.png" type="Texture" id=1]
+[ext_resource path="res://HUD/HUD.gd" type="Script" id=1]
 [ext_resource path="res://Camera.gd" type="Script" id=2]
-[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Player/Player_Container.gd" type="Script" id=4]
-[ext_resource path="res://HUD/HUD.gd" type="Script" id=5]
+[ext_resource path="res://Player/Player_Container.gd" type="Script" id=3]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Enemy/Enemy_Flying.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Enemy/Enemy_Ground.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Enemy/Enemy_Flying.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Coin/Coin.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Coin/Coin.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Assets/spritesheet_default.png" type="Texture" id=8]
 [ext_resource path="res://Assets/tile_door.png" type="Texture" id=9]
 [ext_resource path="res://Levels/Portal.gd" type="Script" id=10]
 
 [sub_resource type="TileSet" id=1]
 0/name = "spritesheet_default.png 0"
-0/texture = ExtResource( 1 )
+0/texture = ExtResource( 8 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 0, 0, 128, 64 )
@@ -27,7 +27,7 @@
 0/shapes = [  ]
 0/z_index = 0
 1/name = "spritesheet_default.png 1"
-1/texture = ExtResource( 1 )
+1/texture = ExtResource( 8 )
 1/tex_offset = Vector2( 0, 0 )
 1/modulate = Color( 1, 1, 1, 1 )
 1/region = Rect2( 0, 64, 128, 64 )
@@ -41,7 +41,7 @@
 1/shapes = [  ]
 1/z_index = 0
 2/name = "spritesheet_default.png 2"
-2/texture = ExtResource( 1 )
+2/texture = ExtResource( 8 )
 2/tex_offset = Vector2( 0, 0 )
 2/modulate = Color( 1, 1, 1, 1 )
 2/region = Rect2( 0, 128, 128, 64 )
@@ -55,7 +55,7 @@
 2/shapes = [  ]
 2/z_index = 0
 3/name = "spritesheet_default.png 3"
-3/texture = ExtResource( 1 )
+3/texture = ExtResource( 8 )
 3/tex_offset = Vector2( 0, 0 )
 3/modulate = Color( 1, 1, 1, 1 )
 3/region = Rect2( 512, 576, 64, 64 )
@@ -69,7 +69,7 @@
 3/shapes = [  ]
 3/z_index = 0
 4/name = "spritesheet_default.png 4"
-4/texture = ExtResource( 1 )
+4/texture = ExtResource( 8 )
 4/tex_offset = Vector2( 0, 0 )
 4/modulate = Color( 1, 1, 1, 1 )
 4/region = Rect2( 512, 640, 64, 64 )
@@ -121,7 +121,7 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 
 [sub_resource type="TileSet" id=14]
 0/name = "spritesheet_default.png 0"
-0/texture = ExtResource( 1 )
+0/texture = ExtResource( 8 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 192, 0, 64, 64 )
@@ -143,7 +143,7 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 } ]
 0/z_index = 0
 1/name = "spritesheet_default.png 1"
-1/texture = ExtResource( 1 )
+1/texture = ExtResource( 8 )
 1/tex_offset = Vector2( 0, 0 )
 1/modulate = Color( 1, 1, 1, 1 )
 1/region = Rect2( 192, 64, 64, 64 )
@@ -165,7 +165,7 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 } ]
 1/z_index = 0
 2/name = "spritesheet_default.png 2"
-2/texture = ExtResource( 1 )
+2/texture = ExtResource( 8 )
 2/tex_offset = Vector2( 0, 0 )
 2/modulate = Color( 1, 1, 1, 1 )
 2/region = Rect2( 256, 128, 64, 64 )
@@ -187,7 +187,7 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 } ]
 2/z_index = 0
 3/name = "spritesheet_default.png 3"
-3/texture = ExtResource( 1 )
+3/texture = ExtResource( 8 )
 3/tex_offset = Vector2( 0, 0 )
 3/modulate = Color( 1, 1, 1, 1 )
 3/region = Rect2( 320, 64, 64, 64 )
@@ -209,7 +209,7 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 } ]
 3/z_index = 0
 4/name = "spritesheet_default.png 4"
-4/texture = ExtResource( 1 )
+4/texture = ExtResource( 8 )
 4/tex_offset = Vector2( 0, 0 )
 4/modulate = Color( 1, 1, 1, 1 )
 4/region = Rect2( 256, 320, 64, 64 )
@@ -231,7 +231,7 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 } ]
 4/z_index = 0
 5/name = "spritesheet_default.png 5"
-5/texture = ExtResource( 1 )
+5/texture = ExtResource( 8 )
 5/tex_offset = Vector2( 0, 0 )
 5/modulate = Color( 1, 1, 1, 1 )
 5/region = Rect2( 320, 320, 64, 64 )
@@ -253,9 +253,9 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 } ]
 5/z_index = 0
 
-[sub_resource type="TileSet" id=15]
+[sub_resource type="TileSet" id=16]
 0/name = "spritesheet_default.png 0"
-0/texture = ExtResource( 1 )
+0/texture = ExtResource( 8 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 640, 64, 64, 128 )
@@ -269,7 +269,7 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 0/shapes = [  ]
 0/z_index = 0
 1/name = "spritesheet_default.png 1"
-1/texture = ExtResource( 1 )
+1/texture = ExtResource( 8 )
 1/tex_offset = Vector2( 0, 0 )
 1/modulate = Color( 1, 1, 1, 1 )
 1/region = Rect2( 640, 224, 64, 160 )
@@ -283,7 +283,7 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 1/shapes = [  ]
 1/z_index = 0
 2/name = "spritesheet_default.png 2"
-2/texture = ExtResource( 1 )
+2/texture = ExtResource( 8 )
 2/tex_offset = Vector2( 0, 0 )
 2/modulate = Color( 1, 1, 1, 1 )
 2/region = Rect2( 192, 576, 64, 64 )
@@ -311,7 +311,7 @@ tile_data = PoolIntArray( 131074, 536870912, 0, 131108, 536870912, 0 )
 tile_set = SubResource( 14 )
 collision_layer = 2
 format = 1
-tile_data = PoolIntArray( 0, 5, 0, 1, 5, 0, 2, 5, 0, 3, 5, 0, 4, 5, 0, 5, 5, 0, 6, 5, 0, 7, 5, 0, 8, 5, 0, 9, 5, 0, 10, 5, 0, 11, 5, 0, 12, 5, 0, 13, 5, 0, 14, 5, 0, 15, 5, 0, 16, 536870917, 0, 17, 536870917, 0, 18, 536870917, 0, 19, 536870917, 0, 20, 536870917, 0, 21, 536870917, 0, 22, 536870917, 0, 23, 536870917, 0, 24, 536870917, 0, 25, 536870917, 0, 26, 536870917, 0, 27, 536870917, 0, 28, 536870917, 0, 29, 536870917, 0, 30, 536870917, 0, 31, 536870917, 0, 32, 536870917, 0, 33, 536870917, 0, 34, 536870917, 0, 35, 536870917, 0, 36, 536870917, 0, 37, 536870917, 0, 38, 536870917, 0, 39, 536870917, 0, 65536, 5, 0, 65575, 536870917, 0, 131072, 5, 0, 131111, 536870917, 0, 196608, 5, 0, 196647, 536870917, 0, 262144, 5, 0, 262183, 536870917, 0, 327680, 5, 0, 327719, 536870917, 0, 393216, 5, 0, 393255, 536870917, 0, 458752, 5, 0, 458762, 2, 0, 458763, 2, 0, 458791, 536870917, 0, 524288, 5, 0, 524294, 1, 0, 524295, 1, 0, 524296, 1, 0, 524297, 2, 0, 524298, 3, 0, 524299, 3, 0, 524327, 536870917, 0, 589824, 3, 0, 589825, 3, 0, 589826, 3, 0, 589827, 3, 0, 589828, 3, 0, 589829, 3, 0, 589830, 3, 0, 589831, 3, 0, 589832, 3, 0, 589833, 3, 0, 589834, 3, 0, 589835, 3, 0, 589836, 3, 0, 589837, 3, 0, 589838, 3, 0, 589839, 3, 0, 589840, 536870915, 0, 589841, 536870915, 0, 589842, 536870915, 0, 589843, 536870915, 0, 589844, 536870915, 0, 589845, 536870915, 0, 589846, 536870915, 0, 589847, 536870915, 0, 589848, 536870915, 0, 589849, 536870915, 0, 589850, 536870915, 0, 589851, 536870915, 0, 589852, 536870915, 0, 589853, 536870915, 0, 589854, 536870915, 0, 589855, 536870915, 0, 589856, 536870915, 0, 589857, 536870915, 0, 589858, 536870915, 0, 589859, 536870915, 0, 589860, 536870915, 0, 589861, 536870915, 0, 589862, 536870915, 0, 589863, 536870915, 0 )
+tile_data = PoolIntArray( 0, 5, 0, 1, 5, 0, 2, 5, 0, 3, 5, 0, 4, 5, 0, 5, 5, 0, 6, 5, 0, 7, 5, 0, 8, 5, 0, 9, 5, 0, 10, 5, 0, 11, 5, 0, 12, 5, 0, 13, 5, 0, 14, 5, 0, 15, 5, 0, 16, 536870917, 0, 17, 536870917, 0, 18, 536870917, 0, 19, 536870917, 0, 20, 536870917, 0, 21, 536870917, 0, 22, 536870917, 0, 23, 536870917, 0, 24, 536870917, 0, 25, 536870917, 0, 26, 536870917, 0, 27, 536870917, 0, 28, 536870917, 0, 29, 536870917, 0, 30, 536870917, 0, 31, 536870917, 0, 32, 536870917, 0, 33, 536870917, 0, 34, 536870917, 0, 35, 536870917, 0, 36, 536870917, 0, 37, 536870917, 0, 38, 536870917, 0, 39, 536870917, 0, 65536, 5, 0, 65575, 536870917, 0, 131072, 5, 0, 131111, 536870917, 0, 196608, 5, 0, 196647, 536870917, 0, 262144, 5, 0, 262183, 536870917, 0, 327680, 5, 0, 327719, 536870917, 0, 393216, 5, 0, 393221, 536870914, 0, 393255, 536870917, 0, 458752, 5, 0, 458762, 2, 0, 458791, 536870917, 0, 524288, 5, 0, 524294, 1, 0, 524295, 1, 0, 524296, 1, 0, 524297, 2, 0, 524327, 536870917, 0, 589824, 3, 0, 589825, 3, 0, 589826, 3, 0, 589827, 3, 0, 589828, 3, 0, 589829, 3, 0, 589830, 3, 0, 589831, 3, 0, 589832, 3, 0, 589833, 3, 0, 589834, 3, 0, 589835, 3, 0, 589836, 3, 0, 589837, 3, 0, 589838, 3, 0, 589839, 3, 0, 589840, 536870915, 0, 589841, 536870915, 0, 589842, 536870915, 0, 589843, 536870915, 0, 589844, 536870915, 0, 589845, 536870915, 0, 589846, 536870915, 0, 589847, 536870915, 0, 589848, 536870915, 0, 589849, 536870915, 0, 589850, 536870915, 0, 589851, 536870915, 0, 589852, 536870915, 0, 589853, 536870915, 0, 589854, 536870915, 0, 589855, 536870915, 0, 589856, 536870915, 0, 589857, 536870915, 0, 589858, 536870915, 0, 589859, 536870915, 0, 589860, 536870915, 0, 589861, 536870915, 0, 589862, 536870915, 0, 589863, 536870915, 0 )
 
 [node name="Platform" type="TileMap" parent="."]
 tile_set = SubResource( 14 )
@@ -320,48 +320,81 @@ format = 1
 tile_data = PoolIntArray( 0, 5, 0, 1, 5, 0, 2, 5, 0, 3, 5, 0, 4, 5, 0, 5, 5, 0, 6, 5, 0, 7, 5, 0, 8, 5, 0, 9, 5, 0, 10, 5, 0, 11, 5, 0, 12, 5, 0, 13, 5, 0, 14, 5, 0, 15, 5, 0, 16, 536870917, 0, 17, 536870917, 0, 18, 536870917, 0, 19, 536870917, 0, 20, 536870917, 0, 21, 536870917, 0, 22, 536870917, 0, 23, 536870917, 0, 24, 536870917, 0, 25, 536870917, 0, 26, 536870917, 0, 27, 536870917, 0, 28, 536870917, 0, 29, 536870917, 0, 30, 536870917, 0, 31, 536870917, 0, 32, 536870917, 0, 33, 536870917, 0, 34, 536870917, 0, 35, 536870917, 0, 36, 536870917, 0, 37, 536870917, 0, 38, 536870917, 0, 39, 536870917, 0, 65536, 5, 0, 65575, 536870917, 0, 131072, 5, 0, 131111, 536870917, 0, 196608, 5, 0, 196647, 536870917, 0, 262144, 5, 0, 262151, 536870914, 0, 262152, 536870914, 0, 262153, 536870914, 0, 262183, 536870917, 0, 327680, 5, 0, 327693, 536870914, 0, 327694, 536870914, 0, 327695, 536870914, 0, 327696, 536870914, 0, 327701, 536870915, 0, 327702, 536870915, 0, 327703, 536870915, 0, 327704, 536870915, 0, 327705, 536870915, 0, 327706, 536870915, 0, 327707, 536870915, 0, 327708, 536870915, 0, 327709, 536870915, 0, 327719, 536870917, 0, 393216, 5, 0, 393220, 536870914, 0, 393221, 536870914, 0, 393222, 536870914, 0, 393255, 536870917, 0, 458752, 5, 0, 458762, 2, 0, 458763, 2, 0, 458769, 536870914, 0, 458770, 536870914, 0, 458771, 536870914, 0, 458772, 536870914, 0, 458791, 536870917, 0, 524288, 5, 0, 524294, 1, 0, 524295, 1, 0, 524296, 1, 0, 524297, 2, 0, 524298, 3, 0, 524299, 3, 0, 524309, 536870913, 0, 524310, 536870913, 0, 524311, 536870913, 0, 524312, 536870913, 0, 524313, 536870913, 0, 524314, 536870913, 0, 524315, 536870913, 0, 524316, 536870913, 0, 524327, 536870917, 0, 589824, 3, 0, 589825, 3, 0, 589826, 3, 0, 589827, 3, 0, 589828, 3, 0, 589829, 3, 0, 589830, 3, 0, 589831, 3, 0, 589832, 3, 0, 589833, 3, 0, 589834, 3, 0, 589835, 3, 0, 589836, 3, 0, 589837, 3, 0, 589838, 3, 0, 589839, 3, 0, 589840, 536870915, 0, 589841, 536870915, 0, 589842, 536870915, 0, 589843, 536870915, 0, 589844, 536870915, 0, 589845, 536870915, 0, 589846, 536870915, 0, 589847, 536870915, 0, 589848, 536870915, 0, 589849, 536870915, 0, 589850, 536870915, 0, 589851, 536870915, 0, 589852, 536870915, 0, 589853, 536870915, 0, 589854, 536870915, 0, 589855, 536870915, 0, 589856, 536870915, 0, 589857, 536870915, 0, 589858, 536870915, 0, 589859, 536870915, 0, 589860, 536870915, 0, 589861, 536870915, 0, 589862, 536870915, 0, 589863, 536870915, 0 )
 
 [node name="Player_Container" type="Node2D" parent="."]
-script = ExtResource( 4 )
+script = ExtResource( 3 )
 
-[node name="Player" parent="Player_Container" instance=ExtResource( 3 )]
+[node name="Player" parent="Player_Container" instance=ExtResource( 4 )]
 
 [node name="Enemy_Container" type="Node2D" parent="."]
 
 [node name="Enemy_Ground" parent="Enemy_Container" instance=ExtResource( 6 )]
 
-[node name="Enemy_Flying" parent="Enemy_Container" instance=ExtResource( 7 )]
+[node name="Enemy_Flying" parent="Enemy_Container" instance=ExtResource( 5 )]
 
 [node name="Enemy_Ground2" parent="Enemy_Container" instance=ExtResource( 6 )]
 position = Vector2( 1629.29, 280.352 )
 max_constraint = 1700
 min_constraint = 1500
 
+[node name="Enemy_Ground3" parent="Enemy_Container" instance=ExtResource( 6 )]
+position = Vector2( 341.434, 524.022 )
+max_constraint = 355
+min_constraint = 320
+
+[node name="Enemy_Ground4" parent="Enemy_Container" instance=ExtResource( 6 )]
+position = Vector2( 360.482, 352.583 )
+max_constraint = 355
+min_constraint = 320
+
+[node name="Enemy_Ground5" parent="Enemy_Container" instance=ExtResource( 6 )]
+position = Vector2( 2312.99, 536.721 )
+max_constraint = 2500
+min_constraint = 2100
+
 [node name="Coin_Container" type="Node2D" parent="."]
 
-[node name="Coin" parent="Coin_Container" instance=ExtResource( 8 )]
+[node name="Coin" parent="Coin_Container" instance=ExtResource( 7 )]
 position = Vector2( 350.258, 340.179 )
 
-[node name="Coin2" parent="Coin_Container" instance=ExtResource( 8 )]
+[node name="Coin2" parent="Coin_Container" instance=ExtResource( 7 )]
 position = Vector2( 841.627, 541.766 )
 
-[node name="Coin3" parent="Coin_Container" instance=ExtResource( 8 )]
+[node name="Coin3" parent="Coin_Container" instance=ExtResource( 7 )]
 position = Vector2( 990.298, 292.302 )
 
-[node name="Coin4" parent="Coin_Container" instance=ExtResource( 8 )]
+[node name="Coin4" parent="Coin_Container" instance=ExtResource( 7 )]
 position = Vector2( 2310.69, 521.607 )
 
-[node name="Portal_to_2" type="Area2D" parent="."]
-position = Vector2( 2431.65, 544.286 )
+[node name="Coin5" parent="Coin_Container" instance=ExtResource( 7 )]
+position = Vector2( 498.444, 225.411 )
+
+[node name="Coin6" parent="Coin_Container" instance=ExtResource( 7 )]
+position = Vector2( 603.212, 485.745 )
+
+[node name="Coin7" parent="Coin_Container" instance=ExtResource( 7 )]
+position = Vector2( 1212.77, 425.423 )
+
+[node name="Coin8" parent="Coin_Container" instance=ExtResource( 7 )]
+position = Vector2( 1536.6, 488.919 )
+
+[node name="Coin9" parent="Coin_Container" instance=ExtResource( 7 )]
+position = Vector2( 2238.24, 527.017 )
+
+[node name="Coin10" parent="Coin_Container" instance=ExtResource( 7 )]
+position = Vector2( 2422.37, 533.367 )
+
+[node name="Portal_to_3" type="Area2D" parent="."]
+position = Vector2( 1668.29, 474.44 )
 script = ExtResource( 10 )
 
-[node name="Sprite" type="Sprite" parent="Portal_to_2"]
+[node name="Sprite" type="Sprite" parent="Portal_to_3"]
 texture = ExtResource( 9 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Portal_to_2"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Portal_to_3"]
 polygon = PoolVector2Array( 24, -27.2, 24, -25.8, 31, -18.8, 31, -16.5, 32, -14.9, 32, 32, -32, 32, -32, -16, -22, -29, -19.5, -29, -14.2, -32, 14.4, -32 )
 
 [node name="Foreground" type="TileMap" parent="."]
 modulate = Color( 1, 1, 1, 0.313726 )
-tile_set = SubResource( 15 )
+tile_set = SubResource( 16 )
 collision_layer = 0
 collision_mask = 0
 format = 1
@@ -384,7 +417,7 @@ script = ExtResource( 2 )
 [node name="HUD" type="Control" parent="CanvasLayer"]
 margin_right = 40.0
 margin_bottom = 40.0
-script = ExtResource( 5 )
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -419,4 +452,4 @@ margin_bottom = 20.0
 text = "Health"
 align = 1
 valign = 1
-[connection signal="body_entered" from="Portal_to_2" to="Portal_to_2" method="_on_Portal_entered"]
+[connection signal="body_entered" from="Portal_to_3" to="Portal_to_3" method="_on_Portal_entered"]
