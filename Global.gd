@@ -1,7 +1,7 @@
 extends Node
 
 var score = 0
-var lives = 2
+var lives = 10
 var health = 20
 var level = 1
 var max_health = 20
