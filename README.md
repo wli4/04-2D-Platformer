@@ -1,6 +1,17 @@
-# Godot-Project-Template
+# 04-2D-Platformer
+Project for MSCH-C220, 15 October 2020
 
-This is an empty Godot project that can be used as a starting place for Godot repositories. After creating and cloning the repository, download this as a zip file. Unzip it and copy the files into the repository folder. You should then be able to import the project.godot file (in the repository folder) as a project in Godot. Make sure you change the project name in the Project Settings.
+2D Platformer project, a fun and rewarding project
 
 ## Implementation
-Created in Godot 3.2.2
+Built using Godot 3.2.2
+
+## References
+Based on the Prof. Jason Francis' lectures
+
+## Future Development
+None
+
+## Created by 
+Wangyin Li
+```
